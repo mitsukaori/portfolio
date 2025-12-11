@@ -9,7 +9,7 @@
     <!-- Inter Font (清潔感のあるフォント) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
-        /* CSS Variables */
+        /* CSS Variables: 黄緑色に変更 */
         :root {
             --primary-color: #4CAF50; /* 濃い緑（見やすい緑） */
             --accent-color: #8BC34A; /* 明るい黄緑 */
@@ -87,21 +87,29 @@
             text-align: center;
         }
 
+        /* アバターの画像コンテナのスタイル */
         .avatar-placeholder {
             width: 120px;
             height: 120px;
-            background-color: var(--accent-color);
+            background-color: var(--accent-color); /* 背景色 */
             border: 5px solid white;
-            border-radius: 50%;
+            border-radius: 50%; /* 円形にする */
             margin-bottom: 1.5rem;
-            display: flex;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden; /* 画像を丸く切り抜くため */
+            display: flex; /* 画像を中央に配置するために追加 */
             justify-content: center;
             align-items: center;
-            font-size: 3.5rem;
-            color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
-
+        
+        /* imgタグがアバター領域に収まるようにする */
+        .avatar-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 画像を切り抜かずにコンテナにフィットさせる */
+            border-radius: 50%; /* imgタグにも丸みをつける */
+        }
+        
         .profile-info h3 {
             font-size: 2rem;
             color: var(--text-color);
@@ -133,7 +141,7 @@
             font-weight: 700;
             /* 強調したい箇所に下線や背景色を適用するカスタムスタイル */
             padding: 0 4px;
-            background-color: #e0f2fe; /* ごく薄い水色で背景を引く */
+            background-color: #e6ffec; /* ごく薄い黄緑で背景を引く */
             border-radius: 4px;
             display: inline-block;
         }
@@ -201,9 +209,10 @@
             <div class="container">
                 <h2><i class="fas fa-user-circle"></i> 自己紹介 (Profile)</h2>
                 <div class="profile-box">
-                    <!-- 画像の代わりとなるCSSボックスとアイコン -->
+                    <!-- 画像の差し替えポイント: この <div> の中の <img> タグを編集してください -->
                     <div class="avatar-placeholder">
-                        <i class="fas fa-code"></i>
+                        <!-- ここに画像を挿入します。ご自身の画像URLに置き換えてください。 -->
+                        <img src="https://www.snoopy.co.jp/pntswp/wp-content/uploads/2016/04/img_snoopy.png" >
                     </div>
                     <div class="profile-info">
                         <h3>光辻 香織 (Kaori Mitsuji)</h3>
@@ -221,7 +230,7 @@
                 <div class="content-block">
                     <p class="gacuchika-title"><i class="fas fa-trophy"></i>文化祭外装係での「外装賞」受賞</p>
                     <p>
-                        高校3年時の文化祭で、私は劇の外装係を担当しました。最終目標として、劇のテーマを最大限に引き出すこと、そして「外装賞」を受賞することを掲げました。
+                        高校3年時の文化祭で、私は劇の外装係を担当しました。最終目標として、劇のテーマを最大限に引き出すこと、そして**「外装賞」を受賞すること**を掲げました。
                     </p>
                     <p>
                         デザイン、買い出し、会計を兼任し、まずは予算と時間の制約という課題に直面しました。これに対し、他の担当者と密に連携を取りながら、様々な意見を集約。その中から、テーマに沿った装飾の優先順位をつけ、限られた予算内で最大の効果を発揮できるデザインを選び抜きました。
